@@ -1,0 +1,9 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
+            "vscodeRSupport": "full",
+            "installRadian": true
+        }
+    }
+}
