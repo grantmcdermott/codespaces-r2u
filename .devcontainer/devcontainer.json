@@ -1,9 +1,20 @@
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    
     "features": {
         "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
             "vscodeRSupport": "full",
             "installRadian": true
         }
+    },
+        
+    "settings": {
+		"r.rterm.linux": "/usr/local/bin/radian",
+		"r.bracketedPaste": true,
+		"r.plot.useHttpgd": true,
+		"[r]": {
+			"editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+		}
     }
+        
 }
