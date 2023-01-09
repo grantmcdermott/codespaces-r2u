@@ -5,7 +5,8 @@
         "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
             "vscodeRSupport": "full",
             "installRadian": true
-        }
+        },
+	"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {}
     },
         
     "settings": {
