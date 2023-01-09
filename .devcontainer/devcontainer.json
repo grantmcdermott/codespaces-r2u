@@ -1,13 +1,10 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    
+    "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
     "features": {
-        "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
-            "vscodeRSupport": "full",
-            "installRadian": true
-        },
-	"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {}
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {}
     },
+
+    "postCreateCommand": "R -q -e 'renv::install()'",
         
     "settings": {
 		"r.rterm.linux": "/usr/local/bin/radian",
