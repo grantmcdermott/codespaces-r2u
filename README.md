@@ -1,18 +1,22 @@
-# Minimal(ish) codespaces environment for R
+# Minimal(ish) Codespace environment for R
 
 To get started, simply click on the green "Code" button at the top right. Then
 select the "Codespaces" tab and click the "+" symbol to start a new Codespace.
 
-![](codespaces-ss.png)
+![](codespaces.png)
 
 The first time you do this, it will open up a new browser tab where your Codespace
-is being instantiated. This first-time instantiation will take about 5 minutes
-(feel free to click "View Logs" to see how things are progressing). But your
+is being instantiated. This first-time instantiation will take a few minutes
+(feel free to click "View logs" to see how things are progressing). But your
 Codespace should deploy almost immediately when you use it again in the future.
 
+![](instantiate.png)
+
 Once the VS Code editor opens up in your browser, feel free to open up the
-`Example.R` and run the code: Hover on or highlight line(s) and click `Cmd`+`Return`
-(Mac) / `Ctrl`+`Return` (Linux / Windows).
+`example.R` and run the code: Highlight or hover over line(s) and execute them
+by hitting  `Cmd`+`Return` (Mac) / `Ctrl`+`Return` (Linux / Windows).
+
+![](vscodepspace.png)
 
 Don't forget to close your Codespace once you have finished using it. Click the blue
 "Codespace" tab at the very bottom left of your VS Code editor and select "Close the
