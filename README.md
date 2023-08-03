@@ -16,7 +16,7 @@ Once the VS Code editor opens up in your browser, feel free to open up the
 `example.R` and run the code: Highlight or hover over line(s) and execute them
 by hitting  `Cmd`+`Return` (Mac) / `Ctrl`+`Return` (Linux / Windows).
 
-![](vscodepspace.png)
+![](vscodespace.png)
 
 Don't forget to close your Codespace once you have finished using it. Click the blue
 "Codespace" tab at the very bottom left of your VS Code editor and select "Close the
