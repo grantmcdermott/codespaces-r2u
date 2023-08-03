@@ -69,9 +69,9 @@ RUN apt-get update \
  	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r \
   	&& ln -s /usr/lib/R/site-library/littler/examples/update.r /usr/local/bin/update.r \
 ## Configure bspm and set one helpful apt default
+        && echo "options(bspm.sudo=TRUE)" >> /etc/R/Rprofile.site \
         && echo "suppressMessages(bspm::enable())" >> /etc/R/Rprofile.site \
         && echo "options(bspm.version.check=FALSE)" >> /etc/R/Rprofile.site \
-        && echo "options(bspm.sudo=TRUE)" >> /etc/R/Rprofile.site \
         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
  	&& rm -rf /var/lib/apt/lists/*
