@@ -1,16 +1,34 @@
 {
-    "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
-    "features": {
-        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {}
-    },
-        
-    "settings": {
-		"r.rterm.linux": "/usr/local/bin/radian",
-		"r.bracketedPaste": true,
-		"r.plot.useHttpgd": true,
-		"[r]": {
-			"editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
-		}
+  "build": {
+      // Path is relataive to the devcontainer.json file.
+      "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+  "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+    "installDevTools": true,
+    "installRMarkdown": true,
+    "installRadian": true,
+    "installVscDebugger": true,
+    "useTesting": true,
+    "vscodeRSupport": "full"
     }
-        
+  },
+
+  // Configure tool-specific properties.
+"customizations": {
+  // Configure properties specific to VS Code.
+  "vscode": {
+    // Set *default* container specific settings.json values on container create.
+    "settings": { 
+      "r.rterm.linux": "/usr/local/bin/radian",
+      "r.bracketedPaste": true,
+      "r.plot.useHttpgd": true,
+      "[r]": {
+        "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+      }
+    }
+  }
+}
+
 }
