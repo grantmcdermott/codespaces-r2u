@@ -1,7 +1,17 @@
-head(mtcars)
+# test some base R functions ----
+
+head(cars)
+
+plot(cars, frame = FALSE)
+grid()
+
+summary(lm(dist ~ speed, cars))
+
+
+# test installing and using packages ----
+
 install.packages("data.table")
 install.packages(c("sf", "ggplot2"))
-
 
 library(sf)
 library(ggplot2)
