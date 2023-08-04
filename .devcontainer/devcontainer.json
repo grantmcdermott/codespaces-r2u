@@ -6,16 +6,17 @@
 
   "features": {
   "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
-    "installDevTools": true,
-    "installRMarkdown": true,
+    // See: https://github.com/rocker-org/devcontainer-features/blob/main/src/r-apt/README.md#options
+    "vscodeRSupport": "full",
     "installRadian": true,
-    "installVscDebugger": true,
-    "useTesting": true,
-    "vscodeRSupport": "full"
+    "installDevTools": false,
+    "installRMarkdown": false,
+    "installVscDebugger": false,
+    "useTesting": false
     }
   },
 
-  // Configure tool-specific properties.
+//   // Configure tool-specific properties.
 "customizations": {
   // Configure properties specific to VS Code.
   "vscode": {
