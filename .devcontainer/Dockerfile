@@ -3,13 +3,19 @@
 
 FROM mcr.microsoft.com/devcontainers/base:jammy
 
+### NOTE: Ignoring this part from Dirk's original Dockerfile to simply go
+### with the default 'vscode' user already provided by above mcr image.
+### See: https://github.com/devcontainers/images/tree/main/src/base-ubuntu
 ## Set a default user. Available via runtime flag `--user docker` 
 ## Add user to 'staff' group, granting them write privileges to /usr/local/lib/R/site.library
 ## User should also have & own a home directory (for rstudio or linked volumes to work properly). 
-RUN useradd -s /bin/bash -m docker \
-	&& usermod -a -G staff docker \
-## Refresh apt, install minimal tools
-        && apt-get update \
+# RUN useradd -s /bin/bash -m docker \
+	# && usermod -a -G staff docker \
+# RUN usermod -a -G staff vscode \
+### END NOTE
+# Refresh apt, install minimal tools
+        # && apt-get update \
+RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		ca-certificates \
 		locales \
