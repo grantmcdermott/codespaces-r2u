@@ -16,10 +16,6 @@ Once the VS Code editor opens up in your browser, feel free to open up the
 `example.R` and run the code: Highlight or hover over line(s) and execute them
 by hitting  `Cmd`+`Return` (Mac) / `Ctrl`+`Return` (Linux / Windows).
 
-**Update:** Please run `sudo apt update -qq` in the VS Code terminal _before_
-executing any R code. This is a temporary, one-time requirement until we resolve
-[#1](https://github.com/grantmcdermott/codespaces-r2u/issues/1).
-
 ![](vscodespace.png)
 
 Don't forget to close your Codespace once you have finished using it. Click the blue
