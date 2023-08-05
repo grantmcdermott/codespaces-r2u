@@ -1,13 +1,15 @@
 {
-  "build": {
-      // Path is relataive to the devcontainer.json file.
-      "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  // "build": {
+  //     // Path is relataive to the devcontainer.json file.
+  //     "dockerfile": "Dockerfile"
+  // },
 
   "features": {
   "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
     // See: https://github.com/rocker-org/devcontainer-features/blob/main/src/r-apt/README.md#options
     "vscodeRSupport": "full",
+    "installBspm": true,
     "installRadian": true,
     "installDevTools": false,
     "installRMarkdown": false,
