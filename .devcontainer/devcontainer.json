@@ -11,7 +11,8 @@
     "installRMarkdown": false,
     "installVscDebugger": false,
     "useTesting": false
-    }
+    },
+  "ghcr.io/rocker-org/devcontainer-features/rstudio-server:0": {}
   },
 
   // Configure tool-specific properties.
