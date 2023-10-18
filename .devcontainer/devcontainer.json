@@ -1,6 +1,7 @@
 {
+  "name": "Basic R",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
-
+  "postCreateCommand": "post.sh",
   "features": {
   "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
     // See: https://github.com/rocker-org/devcontainer-features/blob/main/src/r-apt/README.md#options
