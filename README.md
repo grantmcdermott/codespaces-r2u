@@ -49,6 +49,25 @@ down the container, simply click the same button and choose "Reopen Folder
 Locally". You can always search for these commands via the command palette too
 (`Cmd+Shift+p` / `Ctrl+Shift+p`).
 
+### Customizing
+
+If you find that you install the same packages over and over again when you start the Codespace, you can configure it to do some installs every time you launch it, automatically. Functionally, the `postCreateCommand` can execute any Linux command during the build process. We have here configured it to look for a file `install.R` which simply contains all the necessary `install.packages()` commands as needed. An example (`example-install.R`) is provided. 
+
+#### How would you implement this?
+
+Currently, no extra packags are installed. But if you rename/move the `example-install.R` to `install.R` and rebuild the container, you will have some additional packages installed, every time you launch the Codespace.
+
+Steps:
+
+- Fork the repository
+- Rename `example-install.R` to `install.R`
+- Commit
+- Launch a new Codespace, now from your own fork, and voilà!
+
+#### How do you rename/move?
+
+- Github web interface: click on the "Edit this file" button while viewing `example-install.R`. You can change the filename near the top.
+- Codespace interface: right-click on `example-install.R` and choose `[Rename]`. Don't forget to commit changes!
 
 ### Acknowledgments
 
