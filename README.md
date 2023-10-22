@@ -69,6 +69,28 @@ Steps:
 - Github web interface: click on the "Edit this file" button while viewing `example-install.R`. You can change the filename near the top.
 - Codespace interface: right-click on `example-install.R` and choose `[Rename]`. Don't forget to commit changes!
 
+### Costs
+
+Cloud services may cost money. Even closed, Codespaces you create can still accumulate costs based on the storage used, until they are deleted (not just paused). 
+
+> TL;DR Most users will easily stay within the free tier, but if you intend to use Codspaces a LOT, read on.
+
+Github Codespaces has a free tier (see [full pricing information](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)). As of Oct 2023, 120 core hours of compute time, and  15GB-months storage, are provided for free. 
+
+#### Compute hours
+
+The smallest devcontainer you can create has 2 cores (that is the default), so that corresponds to 60 active computing hours per month, less if you choose a bigger container for computation, for instance, because you need more memory (see [guidance](https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-machine-type-for-your-codespace)). Currently, the largest generally available machine type provides 16 cores (and 64GB of RAM) - so that would be 7.5 hours of compute time before you start paying! Also note that unless you pause the machine, your Codespace will continue to run (by default, [for 30 minutes](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-timeout-period-for-github-codespaces)) after you close your browser window, consuming compute time from your quota.
+
+#### Storage
+
+An empty container freshly started from this devcontainer (2 cores, 8GB RAM, 32GB of disk) uses about 2GB of storage. The largest machine type comes with 128GB of disk storage. You pay for the amount of storage that you use, shown in the [Codespaces overview](https://github.com/codespaces):
+
+![Storage usage](cs-storage.png)
+
+Storage costs are consumed for as long as your Codespace exists, even when paused. Unused Codespaces (paused, but not yet deleted) are auto-deleted [after 30 days](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-automatic-deletion-of-your-codespaces). So an empty Codespace you created will consume 2GB-months of your quota of 15GB-months - well within your quota. Choose a larger unit, and create a lot of data, and you may quickly run out of free storage. Use the largest machine type and download and generate, say, 100GB of data, and you would blow through the free quota in 5 days.  
+
+ONe way to curb costs is to actively delete Codespaces you no longer need (after all, they can be recreated any time by clicking on that `+` button). Another is to configure the auto-delete to be shorter than 30 days. YMMV.
+
 ### Acknowledgments
 
 There are a few key "plumbing" pieces that make everything work here. Thanks to:
